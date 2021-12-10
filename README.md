@@ -13,6 +13,3 @@ Inspi : http://www.roymusic.com/
 
 La page 404 c'est la fin du site
 
-FLICKR API KEY
-692db282a4709750ff959785068ee482
-Secret 1ce10e4d0755cfcc
