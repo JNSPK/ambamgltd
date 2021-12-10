@@ -1,0 +1,116 @@
+#fufu {
+  padding: 2rem 0;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+#fufu img {
+  animation: swing 6000ms linear infinite;
+  width: 64px;
+}
+#fufu img:even {
+  animation: swing 5000ms linear infinite;
+}
+/* from https://animate.style/ */
+
+@keyframes swing {
+  0% {
+    top: 49.5%;
+    left: 49.5%;
+  }
+  50% {
+    top: 50.5%;
+    left: 50.5%;
+  }
+  100% {
+    top: 49.5%;
+    left: 49.5%;
+  }
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.animate__swing {
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.contactS-titre {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /*animation: flipInX 3000ms linear infinite;*/
+  transform: perspective(400px) rotateX(90deg);
+}
+/* A revoir quand JS durée animation contacts*/
+
+@keyframes flipInX {
+  0% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+  }
+  40% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotateX(-20deg);
+    transform: perspective(400px) rotateX(-20deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotateX(-5deg);
+    transform: perspective(400px) rotateX(-5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}

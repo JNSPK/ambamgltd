@@ -1,0 +1,272 @@
+/**/
+
+/* # NOTES # */
+/* video {} <= balise <video> */
+/* body {} <= balise <video> */
+/* header > video {} <= les balises <video>  dans les balise <header> */
+/* body > header > video {} <= les balises <video>  dans les balise <header> */
+/* html > body > header > video {} <= les balises <video>  dans les balise <header> */
+/* .background {} <= balise <* class="background" > */
+/* #myVideo {} <= balise <* id="myVideo" > */
+
+/**/
+
+body {
+  background-color: #121212de;
+  background: linear-gradient(0deg, #000 0%, #303030 80%, #303030 100%);
+
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+/* {} */
+
+main {
+  min-height: 100vh;
+  padding: 5rem 0;
+}
+
+/* {} */
+
+.main-title {
+  font-family: "Smooch", cursive;
+  font-weight: 100;
+}
+.website-title {
+  font-family: "Smooch", cursive;
+  font-weight: 100;
+}
+
+/* {} */
+
+.la-naV {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+  overflow: hidden;
+}
+
+.la-naV,
+.la-naV video,
+.la-naV .overlay {
+  height: 93vh;
+}
+
+@media (min-width: 768px) {
+  .la-naV,
+  .la-naV video,
+  .la-naV .overlay {
+    height: 100vh;
+  }
+}
+
+.la-naV a {
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration-line: none;
+  color: white;
+  background-color: rgb(135, 206, 206, 0.33);
+  font-size: 18px;
+  /* Font à changer*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.la-naV a:hover {
+  background-color: rgba(104, 100, 100, 0.5);
+}
+
+.la-naV video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  object-fit: cover;
+
+  z-index: -2;
+}
+
+.la-naV .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  z-index: -1;
+  background: linear-gradient(0deg, #303030 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.la-naV h1 {
+  font-size: 5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: -1px -3px 1px #6eb3c1;
+  transform: rotate(7deg);
+}
+
+@media (min-width: 576px) {
+  .la-naV h1 {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .la-naV h1 {
+    font-size: 15rem;
+  }
+}
+
+.la-naV nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: rgba(104, 100, 100, 0.43);*/
+
+  height: 64px;
+}
+.la-naV nav img {
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+}
+
+/* {} */
+
+#labeL h3,
+.main-title {
+  text-align: center;
+  font-family: "Smooch", cursive;
+  font-weight: 100;
+  text-shadow: -3px 5px 1px #6eb3c1;
+}
+
+#labeL .row {
+  margin: 5rem 0;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+#labeL h3 {
+  font-size: 3rem;
+}
+
+#labeL p {
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 9rem;
+  }
+  #labeL h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-title {
+    font-size: 10rem;
+  }
+  #labeL h3 {
+    font-size: 5rem;
+  }
+}
+
+/* {} */
+
+#contactS pre {
+  line-height: 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#contactS a {
+  display: flex;
+  justify-content: center;
+  text-decoration-line: none;
+  color: white;
+  font-size: 18px;
+
+  /* Font à changer*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* {} */
+
+.go-to-top {
+  display: flex;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  z-index: 1000;
+  height: 5vh;
+  width: 5vw;
+}
+
+/* {} */
+
+aside img {
+  width: 5vw;
+  height: 5vh;
+}
+
+/* {} */
+.pellicules-box {
+  position: relative;
+  display: flex;
+  /* 343 magic number ? Do you want us to play Halo ?? */
+  left: calc(50% - 343px / 2);
+
+  width: 50%;
+}
+.pellicule {
+  position: absolute;
+  box-shadow: 10px 2px 5px black;
+  background-color: white;
+  width: 266px;
+  height: 325px;
+  padding: 5px;
+  padding-bottom: 64px;
+}
+.pellicule_img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fixed-bottom {
+  bottom: 0px;
+  position: fixed;
+  height: 78px;
+}
