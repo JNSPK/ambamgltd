@@ -9,9 +9,20 @@ window.addEventListener("load", function () {
   const $go_to_top = document.querySelector(".go-to-top");
   const $iframe_SC = document.querySelector("iframe");
   const $contacts = document.querySelector("#contactS");
-  const contacts_top = $contacts.offsetTop;
+
+  let contacts_top = $contacts.offsetTop;
+  let requested_waypoint_update_frame = null;
+
+  const update_waypoint = () => {
+    contacts_top = $contacts.offsetTop
+    setTimeout(() => requested_waypoint_update_frame = null, 1);
+  }
 
   const on_scroll = () => {
+    clearTimeout(requested_waypoint_update_frame);
+    // NOTE(douglasduteil): ensure to have update waypoint after scroll
+    requested_waypoint_update_frame = setTimeout(update_waypoint, 1);
+    
     if (window.scrollY > navbar_top) {
       // below the dolphin...
       $nav.classList.add("fixed-top");
