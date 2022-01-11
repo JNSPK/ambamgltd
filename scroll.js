@@ -9,11 +9,27 @@ window.addEventListener("load", function () {
   const $go_to_top = document.querySelector(".go-to-top");
   const $iframe_SC = document.querySelector("iframe");
   const $contacts = document.querySelector("#contactS");
-  const contacts_top = $contacts.offsetTop;
+  const average_frame_duration = 16.7; //16.7ms
+
+  let contacts_top = $contacts.offsetTop;
+  let requested_waypoint_update_frame = null;
+
+  const update_waypoint = () => {
+    contacts_top = $contacts.offsetTop;
+    setTimeout(() => (requested_waypoint_update_frame = null), 1);
+  };
 
   const on_scroll = () => {
+    clearTimeout(requested_waypoint_update_frame);
+    // NOTE(douglasduteil): ensure to have update waypoint after scroll
+    requested_waypoint_update_frame = setTimeout(
+      update_waypoint,
+      // NOTE(johannilsson): To avoid calling update_waypoint to often
+      average_frame_duration * 2
+    );
+
     if (window.scrollY > navbar_top) {
-      // below the dolphin...
+      // NOTE(douglasduteil): below the dolphin...
       $nav.classList.add("fixed-top");
       $go_to_top.style.visibility = "visible";
     } else {
