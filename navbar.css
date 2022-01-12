@@ -33,7 +33,7 @@
 
 .overlay[hidden] {
   left: -100vw;
-  display: block;
+  display: flex;
 }
 .closemenu {
   position: absolute;
