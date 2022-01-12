@@ -50,14 +50,14 @@ main {
 
 .la-naV,
 .la-naV video,
-.la-naV .overlay {
+.la-naV .gradient {
   height: 93vh;
 }
 
 @media (min-width: 768px) {
   .la-naV,
   .la-naV video,
-  .la-naV .overlay {
+  .la-naV .gradient {
     height: 100vh;
   }
 }
@@ -94,7 +94,7 @@ main {
   z-index: -2;
 }
 
-.la-naV .overlay {
+.la-naV .gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,11 +232,6 @@ main {
 }
 
 /* {} */
-
-aside img {
-  width: 5vw;
-  height: 5vh;
-}
 
 /* {} */
 .pellicules-box {

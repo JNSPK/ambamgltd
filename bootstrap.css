@@ -139,4 +139,7 @@ p {
   text-align: right;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
 /* {} */

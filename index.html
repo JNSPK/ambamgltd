@@ -51,24 +51,29 @@
         alt="Menu"
       />
     </button>
-    <!--  Nav bar -->
-    <nav hidden class="">
-      <img src="https://i.goopics.net/9o2qv8.png" alt="Menu" />
 
-      <a href="https://jnspk.github.io/ambamgltd/#labeL">
-        <img alt="Le Label" src="https://i.goopics.net/ybocln.png" />
-      </a>
-      <a href="https://jnspk.github.io/ambamgltd/#pelliculE"
-        ><img alt="Pellicule" src="https://i.goopics.net/hsw81x.png" />
-      </a>
-      <a href="https://jnspk.github.io/ambamgltd/#contactS"
-        ><img alt="Contacts" src="https://i.goopics.net/3hfqxr.png" />
-      </a>
-    </nav>
+    <!--  Nav bar -->
+    <aside hidden class="overlay" id="overlay">
+      <button class="closemenu" type="button">x</button>
+      <nav class="">
+        <a href="https://jnspk.github.io/ambamgltd/#labeL">
+          Le labeL <img alt="Le Label" src="https://i.goopics.net/ybocln.png" />
+        </a>
+        <a href="https://jnspk.github.io/ambamgltd/#pelliculE"
+          >pelliculE<img
+            alt="Pellicule"
+            src="https://i.goopics.net/hsw81x.png"
+          />
+        </a>
+        <a href="https://jnspk.github.io/ambamgltd/#contactS"
+          >contactS<img alt="Contacts" src="https://i.goopics.net/3hfqxr.png" />
+        </a>
+      </nav>
+    </aside>
     <header id="top" class="la-naV">
       <h1 class="_amBamG_glitch_ website-title">amB amG</h1>
 
-      <div class="overlay"></div>
+      <div class="gradient"></div>
 
       <!--  Background video -->
       <video autoplay muted loop>
@@ -337,5 +342,6 @@
     <script src="scroll.js"></script>
     <script src="pellicules.js"></script>
     <script src="contactS_animation.js"></script>
+    <script src="overflow_toggle.js"></script>
   </body>
 </html>
