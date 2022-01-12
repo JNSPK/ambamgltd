@@ -4,8 +4,6 @@
 // ⛩️ IIFE
 //
 window.addEventListener("load", function () {
-  const $nav = document.querySelector("nav");
-  const navbar_top = $nav.offsetTop;
   const $go_to_top = document.querySelector(".go-to-top");
   const $iframe_SC = document.querySelector("iframe");
   const $contacts = document.querySelector("#contactS");
@@ -27,17 +25,16 @@ window.addEventListener("load", function () {
       // NOTE(johannilsson): To avoid calling update_waypoint to often
       average_frame_duration * 2
     );
-
-    if (window.scrollY > navbar_top) {
+    const height_top = document.documentElement.clientHeight;
+    if (window.scrollY > height_top) {
       // NOTE(douglasduteil): below the dolphin...
-      $nav.classList.add("fixed-top");
+
       $go_to_top.style.visibility = "visible";
     } else {
-      $nav.classList.remove("fixed-top");
       $go_to_top.style.visibility = "hidden";
     }
 
-    if (window.scrollY < contacts_top && window.scrollY > navbar_top) {
+    if (window.scrollY < contacts_top && window.scrollY > height_top) {
       $iframe_SC.classList.add("fixed-bottom");
       $go_to_top.style.visibility = "visible";
     } else {

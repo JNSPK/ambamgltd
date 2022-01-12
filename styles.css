@@ -40,7 +40,7 @@ main {
 
 /* {} */
 
-.la-naV {
+.banner {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -48,21 +48,21 @@ main {
   overflow: hidden;
 }
 
-.la-naV,
-.la-naV video,
-.la-naV .gradient {
+.banner,
+.banner video,
+.banner .gradient {
   height: 93vh;
 }
 
 @media (min-width: 768px) {
-  .la-naV,
-  .la-naV video,
-  .la-naV .gradient {
+  .banner,
+  .banner video,
+  .banner .gradient {
     height: 100vh;
   }
 }
 
-.la-naV a {
+.banner a {
   flex: 1;
   align-content: center;
   align-items: center;
@@ -77,11 +77,11 @@ main {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.la-naV a:hover {
+.banner a:hover {
   background-color: rgba(104, 100, 100, 0.5);
 }
 
-.la-naV video {
+.banner video {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@ main {
   z-index: -2;
 }
 
-.la-naV .gradient {
+.banner .gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -106,7 +106,7 @@ main {
   background: linear-gradient(0deg, #303030 0%, rgba(255, 255, 255, 0) 50%);
 }
 
-.la-naV h1 {
+.banner h1 {
   font-size: 5rem;
   display: flex;
   flex: 1;
@@ -117,18 +117,18 @@ main {
 }
 
 @media (min-width: 576px) {
-  .la-naV h1 {
+  .banner h1 {
     font-size: 10rem;
   }
 }
 
 @media (min-width: 992px) {
-  .la-naV h1 {
+  .banner h1 {
     font-size: 15rem;
   }
 }
 
-.la-naV nav {
+.banner nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +136,7 @@ main {
 
   height: 64px;
 }
-.la-naV nav img {
+.banner nav img {
   justify-content: center;
   height: 28px;
   width: 28px;
@@ -226,7 +226,7 @@ main {
   position: fixed;
   bottom: 90px;
   right: 30px;
-  z-index: 1000;
+  z-index: 999;
   height: 5vh;
   width: 5vw;
 }
