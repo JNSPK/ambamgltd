@@ -29,12 +29,14 @@
   justify-content: center;
   align-content: space-around;
   align-items: center;
+  visibility: visible;
 }
 
 .overlay[hidden] {
   left: -100vw;
   display: flex;
   opacity: 0;
+  visibility: hidden;
 }
 .closemenu {
   position: absolute;
